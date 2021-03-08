@@ -18,10 +18,14 @@ function modZero(z){
   return false;
 }
 // fine FUNZIONI
+do {
+  var scelta1Utente = prompt("scegli PARI o DISPARI");
+  scelta1Utente = scelta1Utente.toUpperCase(0);
+  console.log(scelta1Utente);
+} while (scelta1Utente !== "PARI" || scelta1Utente !== "DISPARI" );
 
-var scelta1Utente = prompt("scegli PARI o DISPARI");
-scelta1Utente = scelta1Utente.toUpperCase(0);
-console.log(scelta1Utente);
+
+
 
 var scelta2Utente = parseInt(prompt("scegli un numero tra 1 e 5"));
 console.log(scelta2Utente);
