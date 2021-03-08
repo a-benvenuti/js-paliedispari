@@ -23,17 +23,17 @@ function modZero(z){
 }
 // fine FUNZIONI
 // inserimento delle scelte da parte dell'utente con relativi controlli
+var scelta1Utente = "";
 do {
-  var scelta1Utente = prompt("scegli PARI o DISPARI");
+  scelta1Utente = prompt("scegli PARI o DISPARI");
   scelta1Utente = scelta1Utente.toUpperCase(0);
 } while (scelta1Utente !== "PARI" && scelta1Utente !== "DISPARI" );
-
 variabileStampScelta.innerHTML = "scelta tra pari e dispari: " + scelta1Utente;
 
+var scelta2Utente = 0;
 do {
-  var scelta2Utente = parseInt(prompt("scegli un numero tra 1 e 5"));
+  scelta2Utente = parseInt(prompt("scegli un numero tra 1 e 5"));
 } while ((scelta2Utente < 1 || scelta2Utente > 5) || (isNaN(scelta2Utente)));
-
 variabileNumGiocatore.innerHTML = "numero giocatore: " + scelta2Utente;
 
 // Cpu genera il suo numero random
