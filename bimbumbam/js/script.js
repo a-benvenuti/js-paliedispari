@@ -18,26 +18,26 @@ function modZero(z){
   return false;
 }
 // fine FUNZIONI
+// inserimento delle scelte da parte dell'utente con relativi controlli
 do {
   var scelta1Utente = prompt("scegli PARI o DISPARI");
   scelta1Utente = scelta1Utente.toUpperCase(0);
   console.log(scelta1Utente);
-} while (scelta1Utente !== "PARI" || scelta1Utente !== "DISPARI" );
+} while (scelta1Utente !== "PARI" && scelta1Utente !== "DISPARI" );
+do {
+  var scelta2Utente = parseInt(prompt("scegli un numero tra 1 e 5"));
+  console.log(scelta2Utente);
+} while (scelta2Utente < 1 || scelta2Utente > 5 );
 
-
-
-
-var scelta2Utente = parseInt(prompt("scegli un numero tra 1 e 5"));
-console.log(scelta2Utente);
-
+// Cpu genera il suo numero random
 var sceltaCpu = random(1, 5);
 console.log(sceltaCpu);
 
+// verifica del vincitore
 var totale = somma(scelta2Utente, sceltaCpu);
 console.log(totale);
-
-if (modZero(totale) && scelta1Utente === "PARI"){
+if ((modZero(totale) && scelta1Utente === "PARI") || (modZero(totale) == false && scelta1Utente === "DISPARI")){
   console.log("hai vinto");
-} else{
+} else {
   console.log("hai Perso");
 }
